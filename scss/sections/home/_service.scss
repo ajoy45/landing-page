@@ -1,0 +1,13 @@
+@use"../../abstract" as *;
+
+.service-section {
+    @include py(60px);
+
+    @include tablet {
+        @include py(80px)
+    }
+
+    @include desktop {
+        @include py(120px)
+    }
+}

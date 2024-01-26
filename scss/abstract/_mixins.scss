@@ -20,7 +20,6 @@
     line-height: 1.50em;
 
     @media (min-width: 768px) {
-        line-height: 1.3em;
         font-size: 40px;
     }
 
@@ -38,6 +37,12 @@
 
 @mixin text-20($weight: 400, $line-h: 1.60em) {
     font-size: 20px;
+    font-weight: $weight;
+    line-height: $line-h;
+}
+
+@mixin text-24($weight: 400, $line-h: 1.5em) {
+    font-size: 24px;
     font-weight: $weight;
     line-height: $line-h;
 }

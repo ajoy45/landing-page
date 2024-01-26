@@ -21,7 +21,7 @@
 
   .section-title,
   .content-title {
-    @include heading-64;
+    @include heading-48;
 
     &+* {
       padding-top: 14px;
@@ -51,6 +51,11 @@
 
 .gutter-x-80 {
   --bs-gutter-x: 80px !important;
+
+}
+
+.gutter-x-40 {
+  --bs-gutter-x: 40px !important;
 
 }
 

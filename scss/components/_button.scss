@@ -44,7 +44,7 @@
     }
 
 
-    &-link {
+    &--link {
         font-family: $heading-font;
         @include text-20($line-h: 1.4);
         text-decoration: none;

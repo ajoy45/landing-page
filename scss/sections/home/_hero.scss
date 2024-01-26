@@ -6,7 +6,7 @@
         @include py(120px)
     }
 
-    background: $secondary;
+    background:linear-gradient(to right, $secondary, $light-gray);
     position: relative;
     z-index: 1;
 
@@ -68,5 +68,20 @@
 
     @include desktop {
         justify-content: start;
+    }
+}
+
+.brand-logo {
+    display: flex;
+    column-gap: 56px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 56px;
+    row-gap: 30px;
+
+    .brand-logo-img {
+        img {
+            width: 100%;
+        }
     }
 }

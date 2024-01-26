@@ -1,0 +1,84 @@
+@use"../abstract" as *;
+
+// service card
+.service-card {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding: 15px;
+
+
+    &:hover::before {
+        animation: none;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        left: -50%;
+        top: -50%;
+        width: 200%;
+        height: 200%;
+        background-color: #399953;
+        background-repeat: no-repeat;
+        background-size: 50% 50%, 50% 50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(#399953, #399953), linear-gradient($primary, $primary), linear-gradient($text-white, $text-white), linear-gradient(#377af5, #377af5);
+        animation: rotate 10s linear infinite;
+
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        left: 6px;
+        top: 6px;
+        width: calc(100% - 12px);
+        height: calc(100% - 12px);
+        background: $text-white;
+        border-radius: 5px;
+    }
+
+    .service-card-body {
+        padding: 15px;
+
+        .service-card-title {
+            @include text-24;
+            margin-top: 16px;
+        }
+
+        p {
+            @include text-16;
+        }
+
+    }
+
+    .service-card-img {
+        img {
+            width: 100%;
+        }
+
+        transform: scale(.9);
+        transition: .8s;
+
+    }
+
+    &:hover .service-card-img {
+        transition: .4s;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
