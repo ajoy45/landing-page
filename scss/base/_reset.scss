@@ -1,0 +1,51 @@
+@use '../abstract' as *;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #{$primary-hex};
+    --secondary: #{$secondary-hex};
+    --tertiary: #{$tertiary-hex};
+    --text-white: #{$text-white-hex};
+    --light-gray:#{$light-gray-hex};
+    --gray: #{$gray-hex};
+}
+
+body {
+    font-family: $body-font;
+    font-weight: $body-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $heading-font;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button,
+a {
+    &:focus {
+        box-shadow: none;
+    }
+}

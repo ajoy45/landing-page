@@ -1,0 +1,107 @@
+@mixin py($top, $bottom: $top) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin px($left, $right: $left) {
+    padding-left: $left;
+    padding-right: $right;
+}
+
+@mixin mx($left, $right: $left, $pos: true) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+
+@mixin mobile {
+    @media (min-width:480px) {
+        @content;
+    }
+}
+
+@mixin mobile-large {
+    @media (min-width:575px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width:768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width:992px) {
+        @content;
+    }
+}
+
+@mixin large-desktop {
+    @media (min-width:1200px) {
+        @content;
+    }
+}
+
+@mixin extra-large-desktop {
+    @media (min-width:1400px) {
+        @content;
+    }
+}
+
+@mixin flex($display: flex) {
+    display: $display;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin column-gap($gap: 30px, $align: center, $flex: flex) {
+    display: $flex;
+    align-items: $align;
+    column-gap: $gap;
+}
+
+
+@mixin fontawesome($unicode: "\f00c", $fw: 900) {
+    content: $unicode;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+@mixin absolute($pos: "top left", $zIndex: null) {
+    position: absolute;
+    z-index: $zIndex;
+
+    @if ($pos =="top left") {
+        inset: 0 auto auto 0;
+    }
+
+    @if ($pos =="top right") {
+        inset: 0 0 auto auto;
+    }
+
+    @if ($pos =="bottom left") {
+        inset: auto auto 0 0;
+    }
+
+    @if ($pos =="bottom right") {
+        inset: auto 0 0 auto;
+    }
+
+    @if ($pos =="top left right") {
+        inset: 0 0 auto 0;
+    }
+
+    @if ($pos =="custom") {
+        @content;
+    }
+}
+
+@mixin square($size,$radius){
+    min-width: $size;
+    max-width: $size;
+    min-height: $size;
+    max-height: $size;
+    border-radius: $radius;
+}

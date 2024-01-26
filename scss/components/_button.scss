@@ -1,0 +1,68 @@
+@use"../abstract" as *;
+
+.btn {
+    font-family: $body-font;
+    border-radius: 56px;
+    @include text-20(700);
+    @include flex(inline-flex);
+    @include py(10px);
+    @include px(30px);
+
+    line-height: 1;
+
+    @include desktop {
+        @include py(16px);
+        @include px(56px);
+    }
+
+    &--primary {
+        color: $secondary;
+        background: $primary;
+        --bs-btn-border-color: none;
+
+        &:hover {
+            background: $primary;
+        }
+    }
+
+    &--secondary {
+        color: $text-white;
+        background: $secondary;
+        --bs-btn-border-color: none;
+        border: 1px solid $text-white;
+
+        &:hover {
+            background: $secondary;
+            color: $text-white;
+            border: 1px solid $text-white;
+        }
+
+    }
+
+    &-lg {
+        @include py(20px);
+    }
+
+
+    &-link {
+        font-family: $heading-font;
+        @include text-20($line-h: 1.4);
+        text-decoration: none;
+        @include column-gap($flex: inline-flex, $gap: 7px);
+        color: $secondary;
+
+
+        &__icon {
+            width: 16px;
+
+            path {
+                stroke: currentColor;
+            }
+        }
+
+        &--sm {
+            @include text-16;
+            column-gap: 8px;
+        }
+    }
+}

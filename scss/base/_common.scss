@@ -1,0 +1,59 @@
+@use "../abstract" as *;
+
+.subtitle {
+  @include text-20;
+  margin-bottom: 12px;
+  @include column-gap($flex: inline-flex, $gap: 12px);
+
+  &::before {
+    content: "";
+    width: 36px;
+    height: 2px;
+    border-radius: 500px;
+    background-color: $primary;
+    display: inline-block;
+  }
+}
+
+.section-title-block,
+.content-title-block {
+
+
+  .section-title,
+  .content-title {
+    @include heading-64;
+
+    &+* {
+      padding-top: 14px;
+    }
+  }
+
+  p {
+    @include text-20;
+
+    &:last-of-type {
+      margin-bottom: 0;
+
+      &+* {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+
+.section-title-block {
+  padding-bottom: 40px;
+
+  @include desktop {
+    padding-bottom: 52px;
+  }
+}
+
+.gutter-x-80 {
+  --bs-gutter-x: 80px !important;
+
+}
+
+.gutter-y-30 {
+  --bs-gutter-y: 30px !important;
+}

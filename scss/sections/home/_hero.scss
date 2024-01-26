@@ -1,0 +1,72 @@
+@use"../../abstract" as *;
+
+// hero section scss
+.hero-section {
+    @include desktop {
+        @include py(120px)
+    }
+
+    background: $secondary;
+    position: relative;
+    z-index: 1;
+
+    .hero-shape {
+        @include absolute("top right", -1);
+
+        width: 22%;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    .img-bottom {
+        width: 100%;
+
+        img {
+            width: 100%
+        }
+    }
+
+}
+
+.hero-content {
+    .hero-title {
+        @include heading-48;
+        margin-bottom: 16px;
+        color: $text-white;
+        text-align: center;
+    }
+
+    p {
+        @include text-16;
+        color: $light-gray;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+
+
+
+    @include desktop {
+        .hero-title {
+            text-align: inherit;
+        }
+
+        p {
+            text-align: inherit;
+        }
+
+    }
+}
+
+.hero-btn-group {
+    display: flex;
+    column-gap: 24px;
+    justify-content: center;
+
+    @include desktop {
+        justify-content: start;
+    }
+}
