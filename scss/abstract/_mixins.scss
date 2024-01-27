@@ -66,3 +66,17 @@
         font-size: 14px;
     }
 }
+
+@mixin text-12($weight: 400, $line-h: 1.71em) {
+    font-size: 8px;
+    font-weight: $weight;
+    line-height: $line-h;
+
+    @media (min-width: 768px) {
+        font-size: 10px;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 12px;
+    }
+}

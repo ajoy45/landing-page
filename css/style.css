@@ -1598,6 +1598,68 @@ a:focus {
   width: 100%;
 }
 
+.content-2-widget > *:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.content-2-widget .content-2-widget__item {
+  position: relative;
+  border-radius: 4px;
+  color: var(--secondary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6em;
+  overflow: hidden;
+  transition: 0.4s;
+  z-index: 1;
+  background: var(--text-white);
+  box-shadow: 6px 12px 40px 0px rgba(19, 19, 37, 0.07);
+}
+.content-2-widget .content-2-widget__item::before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: var(--secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: inherit;
+  transition: 0.4s;
+  z-index: -1;
+}
+.content-2-widget .content-2-widget__item > * {
+  padding: 24px;
+}
+.content-2-widget .content-2-widget__item a {
+  color: inherit !important;
+  display: flex;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  transition: 0.4s;
+  height: 100%;
+}
+.content-2-widget .content-2-widget__item .item-1:before {
+  content: "\f52d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.content-2-widget .content-2-widget__item .item-2:before {
+  content: "\f06e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.content-2-widget .content-2-widget__item .item-3:before {
+  content: "\f185";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+.content-2-widget .content-2-widget__item:hover {
+  transition: background-color 0.8s;
+  color: var(--text-white);
+}
+.content-2-widget .content-2-widget__item:hover::before {
+  width: 100%;
+}
+
 .hero-section {
   background: linear-gradient(to right, var(--secondary), var(--light-gray));
   position: relative;
@@ -1730,14 +1792,14 @@ a:focus {
   width: 100%;
 }
 .content-1-image-wrapper .content-1-card {
+  width: 50%;
   position: absolute;
-  top: 49%;
+  top: 40%;
   right: 23%;
   padding: 40px;
   box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.12);
   background: var(--text-white);
   border-radius: 12px;
-  width: 39%;
 }
 .content-1-image-wrapper .content-1-card .content-1-card {
   width: 27%;
@@ -1798,4 +1860,91 @@ a:focus {
   .list-type-wrapper {
     justify-content: start;
   }
+}
+
+.content-2-section {
+  padding-bottom: 60px;
+}
+@media (min-width: 768px) {
+  .content-2-section {
+    padding-bottom: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .content-2-section {
+    padding-bottom: 120px;
+    padding-top: 60px;
+  }
+}
+
+.content-2-text-wrapper .content-2-widget {
+  margin-top: 40px;
+}
+
+.content-2-title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.56em;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .content-2-title {
+    margin: inherit;
+    text-align: inherit;
+  }
+}
+
+.content-2-image-wrapper {
+  margin: auto;
+}
+.content-2-image-wrapper .content-2-image {
+  width: 76%;
+  position: relative;
+  margin: auto;
+}
+@media (min-width: 992px) {
+  .content-2-image-wrapper .content-2-image {
+    margin: inherit;
+  }
+}
+.content-2-image-wrapper .content-2-image img {
+  width: 100%;
+}
+.content-2-image-wrapper .content-2-card {
+  width: 65%;
+  position: absolute;
+  top: 46%;
+  right: 13%;
+  padding: 40px;
+  box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.12);
+  background: var(--text-white);
+  border-radius: 12px;
+}
+.content-2-image-wrapper .content-2-card .content-2-card-list {
+  margin-top: 20px;
+}
+.content-2-image-wrapper .content-2-card .content-2-card-list li {
+  list-style-type: disc;
+  list-style-position: inside;
+  font-size: 8px;
+  font-weight: 400;
+  line-height: 1.71em;
+}
+@media (min-width: 768px) {
+  .content-2-image-wrapper .content-2-card .content-2-card-list li {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .content-2-image-wrapper .content-2-card .content-2-card-list li {
+    font-size: 12px;
+  }
+}
+.content-2-image-wrapper .content-2-card .content-2-card-list li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+.content-2-image-wrapper .content-2-card .content-2-card-list ::marker {
+  color: var(--primary);
 }/*# sourceMappingURL=style.css.map */

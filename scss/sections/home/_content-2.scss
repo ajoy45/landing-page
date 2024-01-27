@@ -1,0 +1,83 @@
+@use"../../abstract" as *;
+
+.content-2-section {
+    padding-bottom: 60px;
+
+    @include tablet {
+        padding-bottom: 80px;
+    }
+
+    @include desktop {
+        padding-bottom: 120px;
+        padding-top: 60px;
+    }
+}
+
+.content-2-text-wrapper {
+    .content-2-widget {
+        margin-top: 40px;
+    }
+}
+
+.content-2-title {
+    @include heading-36;
+
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+
+    @include desktop {
+        margin: inherit;
+        text-align: inherit;
+    }
+}
+
+.content-2-image-wrapper {
+    margin: auto;
+
+    .content-2-image {
+        width: 76%;
+        position: relative;
+        margin: auto;
+
+        @include desktop {
+            margin: inherit;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .content-2-card {
+        width: 65%;
+        position: absolute;
+        top: 46%;
+        right: 13%;
+        padding: 40px;
+        box-shadow: 0px 4px 32px 0px rgba(0, 0, 0, 0.12);
+        background: $text-white;
+        border-radius: 12px;
+
+
+        .content-2-card-list {
+            margin-top: 20px;
+
+            li {
+                list-style-type: disc;
+                list-style-position: inside;
+                @include text-12;
+
+                &:not(:last-of-type) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            ::marker {
+                color: $primary;
+            }
+
+        }
+
+    }
+}
